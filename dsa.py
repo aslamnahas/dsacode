@@ -108,6 +108,38 @@ class Linked_list:
         else:
             self.head=self.head.ref
 
+    def enddelete(self):
+        if self.head is None:
+            print('nonnnnnenenenennene')
+        # elif self.head.ref is None:
+        #         self.head=None
+        else:
+            n = self.head
+            while n.ref.ref is not None:
+                n = n.ref
+            n.ref = None
+
+    def middledelte(self, x):
+        if self.head is None:
+            print('no node ')
+            return
+        if x == self.head.data:
+            self.head = self.head.ref
+            return
+        n = self.head
+        while n.ref is not None:
+            if x == n.ref.data:
+            
+                break
+            n = n.ref
+        if n.ref is None:
+            print('lllllllllllll')
+        else:
+
+            n.ref = n.ref.ref
+        
+            
+
   
 ll1=Linked_list()
 # s=[1,2,3,4]
@@ -128,8 +160,10 @@ ll1=Linked_list()
 ll1.add_first(2)
 ll1.add_first(22)
 ll1.add_first(209)
-ll1.deletefirst()
+# ll1.deletefirst()
 # ll1.middle()
+# ll1.enddelete()
+ll1.middledelte(209)
 ll1.printt()
 # print()
 # ll1.middleaddbefore(100,2)
