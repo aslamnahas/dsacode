@@ -32,6 +32,8 @@ class Linked_list:
 
 
 
+
+
     def add_middle(self,data,x):
         n=self.head
         while n is not None:
@@ -99,6 +101,13 @@ class Linked_list:
             slow = slow.ref
             fast = fast.ref.ref
         return slow.data
+
+    def deletefirst(self):
+        if self.head is None:
+            print('there is empty')
+        else:
+            self.head=self.head.ref
+
   
 ll1=Linked_list()
 # s=[1,2,3,4]
@@ -106,20 +115,24 @@ ll1=Linked_list()
 # ll1.add_first(10)
 # for i in s:
     # ll1.end_add(i)
-ll1.end_add(22)
+# ll1.end_add(22)
 
-ll1.middlechck(15, 2)
 
-ll1.printt()
-ll1.add_first(111)
-ll1.end_add(9)
-ll1.add_middle(102,3)
-ll1.add_middle(102,3)
+# ll1.middlechck(15, 2)
+
+# ll1.printt()
+# ll1.add_first(111)
+# ll1.end_add(9)
+# ll1.add_middle(102,3)
+# ll1.add_middle(102,3)
 ll1.add_first(2)
+ll1.add_first(22)
+ll1.add_first(209)
+ll1.deletefirst()
 # ll1.middle()
 ll1.printt()
 # print()
-ll1.middleaddbefore(100,2)
-ll1.printt()
-a = ll1.middle()
-print('midleee',a)
+# ll1.middleaddbefore(100,2)
+# ll1.printt()
+# a = ll1.middle()
+# print('midleee',a)
